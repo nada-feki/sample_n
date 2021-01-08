@@ -1,0 +1,26 @@
+name: sample_n
+label: "Sample N"
+description: Samples the input dataset according to the `N` property
+inputs:
+- name: n
+  label: N
+  type: Int
+  default: 100
+  description: "number of lines to sample"
+  is_property: true
+- name: input_dataset_path
+  type: String
+  description: 'Path of the local file containing the Input data.'
+outputs:
+- name: output_dataset_path
+  type: String
+  description: 'Path to write the output data'
+implementation:
+  container:
+    image: eu.gcr.io/prevision-enterprise/prevision/pio-components-python:v1
+    command: [python, components/sample/src/sample.py]
+    args: [
+      --n, {inputValue: n},
+      --input-dataset-path, {inputPath: input_dataset_path},
+      --output-dataset-path, {outputPath: output_dataset_path},
+    ]
