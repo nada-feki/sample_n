@@ -1,5 +1,5 @@
 name: sample_n
-label: "Sample N"
+label: "Sample N 2"
 description: Samples the input dataset according to the `N` property
 inputs:
 - name: n
