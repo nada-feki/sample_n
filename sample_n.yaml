@@ -1,4 +1,4 @@
-name: sample_n
+name: sample_n_v2
 label: "Sample N 3"
 description: Samples the input dataset according to the `N` property
 inputs:
