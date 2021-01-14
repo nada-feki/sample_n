@@ -18,7 +18,7 @@ outputs:
 implementation:
   container:
     image: eu.gcr.io/prevision-enterprise/prevision/pio-components-python:v1
-    command: [python, src/sample.py]
+    command: [python, components/sample_n/src/sample_n.py]
     args: [
       --n, {inputValue: n},
       --input-dataset-path, {inputPath: input_dataset_path},
