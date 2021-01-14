@@ -1,7 +1,7 @@
 FROM eu.gcr.io/prevision-enterprise/prevision/pio-components-python:v1
 
 
-COPY ./src /component/sample/src
+COPY ./src /component/sample_n/src
 # COPY requirements.txt /component/sample/requirements.txt
 
 RUN python -m pip install pandas
