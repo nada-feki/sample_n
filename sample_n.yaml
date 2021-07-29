@@ -17,7 +17,6 @@ outputs:
   description: 'Path to write the output data'
 implementation:
   container:
-    image: eu.gcr.io/prevision-enterprise/prevision/pio-components-python:v1
     command: [python, components/sample_n/src/sample_n.py]
     args: [
       --n, {inputValue: n},
